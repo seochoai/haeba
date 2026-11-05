@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>김해바른 | 서초구의회의원</title>
+  <meta name="description" content="제10대 서울특별시 서초구의회의원 김해바른 (서초구의회 마선거구, 국민의힘)" />
+  <meta property="og:title" content="김해바른 | 서초구의회의원" />
+  <meta property="og:description" content="제10대 서울특별시 서초구의회의원 김해바른" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    :root {
+      --bg: #fbfaf8;
+      --surface: #ffffff;
+      --ink: #14181f;
+      --ink-2: #4a5160;
+      --ink-3: #8a909c;
+      --line: #e7e4df;
+      --accent: #e61e2b;
+      --accent-soft: #fdecec;
+      --navy: #0f2a4a;
+      --radius: 14px;
+      --max: 1080px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1216;
+        --surface: #171b21;
+        --ink: #eef0f3;
+        --ink-2: #b4bac5;
+        --ink-3: #7c8390;
+        --line: #262b33;
+        --accent: #ff4a55;
+        --accent-soft: #2a1618;
+        --navy: #9cc0ea;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      word-break: keep-all;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      backdrop-filter: saturate(160%) blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+    .brand span { color: var(--accent); }
+    .nav ul { display: flex; gap: 28px; list-style: none; font-size: 15px; color: var(--ink-2); }
+    .nav ul a:hover { color: var(--ink); }
+
+    /* Hero */
+    .hero { padding: 96px 0 88px; border-bottom: 1px solid var(--line); }
+    .hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 14px; font-weight: 600; color: var(--accent);
+      background: var(--accent-soft); padding: 6px 12px; border-radius: 999px;
+    }
+    .eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    .hero h1 { font-size: clamp(44px, 7vw, 76px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; margin: 22px 0 18px; }
+    .hero h1 small { display: block; font-size: 0.32em; font-weight: 600; color: var(--ink-2); letter-spacing: -0.01em; margin-bottom: 10px; }
+    .tagline { font-size: clamp(20px, 2.6vw, 26px); font-weight: 600; color: var(--navy); letter-spacing: -0.02em; }
+    .lead { margin-top: 16px; color: var(--ink-2); font-size: 17px; max-width: 34em; }
+    .cta { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 13px 22px; border-radius: 10px; font-weight: 600; font-size: 15px; border: 1px solid var(--line); background: var(--surface); }
+    .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn:hover { transform: translateY(-1px); transition: transform .15s; }
+
+    .portrait {
+      aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden;
+      background: linear-gradient(160deg, var(--accent-soft), var(--surface));
+      border: 1px solid var(--line);
+      display: grid; place-items: center; position: relative;
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .portrait .initial { font-size: 120px; font-weight: 800; color: var(--accent); opacity: .18; letter-spacing: -0.05em; }
+    .portrait .badge {
+      position: absolute; left: 16px; bottom: 16px; right: 16px;
+      background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+      padding: 12px 16px; font-size: 14px; color: var(--ink-2);
+    }
+    .portrait .badge b { color: var(--ink); display: block; font-size: 16px; }
+
+    /* Sections */
+    section { padding: 88px 0; border-bottom: 1px solid var(--line); }
+    .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 40px; }
+    .sec-head .num { font-size: 14px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+    .sec-head h2 { font-size: clamp(28px, 4vw, 36px); font-weight: 800; letter-spacing: -0.03em; }
+
+    /* Stats */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .stat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+    .stat .k { font-size: 13px; color: var(--ink-3); font-weight: 600; }
+    .stat .v { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin-top: 6px; }
+
+    /* Profile */
+    .profile { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; }
+    .card h3 { font-size: 18px; font-weight: 700; margin-bottom: 18px; }
+    dl.info { display: grid; grid-template-columns: 96px 1fr; row-gap: 14px; font-size: 15px; }
+    dl.info dt { color: var(--ink-3); font-weight: 600; }
+    dl.info dd { color: var(--ink); }
+
+    /* Timeline */
+    .timeline { list-style: none; position: relative; padding-left: 28px; }
+    .timeline::before { content: ""; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+    .timeline li { position: relative; padding-bottom: 28px; }
+    .timeline li:last-child { padding-bottom: 0; }
+    .timeline li::before {
+      content: ""; position: absolute; left: -28px; top: 7px; width: 14px; height: 14px; border-radius: 50%;
+      background: var(--surface); border: 3px solid var(--ink-3);
+    }
+    .timeline li.now::before { border-color: var(--accent); background: var(--accent); }
+    .timeline .when { font-size: 13px; font-weight: 700; color: var(--ink-3); }
+    .timeline li.now .when { color: var(--accent); }
+    .timeline .what { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
+    .timeline .desc { font-size: 15px; color: var(--ink-2); }
+
+    /* Council */
+    .council { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .council .card { padding: 28px; }
+    .council .card p { color: var(--ink-2); font-size: 15px; }
+    .tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: var(--accent-soft); color: var(--accent); margin-bottom: 12px; }
+    .todo { border: 1.5px dashed var(--line); background: transparent; }
+    .todo p { color: var(--ink-3) !important; }
+
+    /* Contact */
+    .contact { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
+    .contact p.big { font-size: clamp(22px, 3vw, 30px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.45; }
+    .contact ul { list-style: none; display: grid; gap: 12px; }
+    .contact li { display: flex; justify-content: space-between; gap: 16px; padding: 18px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; font-size: 15px; }
+    .contact li span:first-child { color: var(--ink-3); font-weight: 600; }
+
+    footer { padding: 40px 0 56px; color: var(--ink-3); font-size: 13px; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+    @media (max-width: 860px) {
+      .nav ul { display: none; }
+      .hero { padding: 56px 0 64px; }
+      .hero-grid, .profile, .contact { grid-template-columns: 1fr; gap: 32px; }
+      .portrait { max-width: 360px; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .council { grid-template-columns: 1fr; }
+      section { padding: 64px 0; }
+    }
+    @media (max-width: 480px) {
+      .wrap { padding: 0 16px; }
+      dl.info { grid-template-columns: 80px 1fr; }
+      .card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <a href="#" class="brand">김해바른<span>.</span></a>
+      <ul>
+        <li><a href="#about">소개</a></li>
+        <li><a href="#career">경력</a></li>
+        <li><a href="#council">의정활동</a></li>
+        <li><a href="#contact">연락처</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">제10대 서울특별시 서초구의회의원</span>
+        <h1><small>서초구의회 마선거구</small>김해바른</h1>
+        <p class="tagline">서초의 내일을, 바르게.</p>
+        <p class="lead">
+          국토교통부 장관 정책자문위원과 한국교통안전공단 비상임이사로 일하며 쌓은 경험을 바탕으로,
+          2026년 제9회 전국동시지방선거에서 서초구민의 선택을 받았습니다.
+          가장 가까운 곳에서 구민의 목소리를 듣고 의정으로 답하겠습니다.
+        </p>
+        <div class="cta">
+          <!-- 실제 이메일 주소로 교체하세요 (아래 연락처 섹션의 이메일도 함께) -->
+          <a class="btn primary" href="mailto:example@seocho.go.kr">메일 보내기</a>
+          <a class="btn" href="#career">경력 보기</a>
+        </div>
+      </div>
+      <div class="portrait">
+        <img src="profile.webp" alt="김해바른 의원 프로필 사진" />
+        <div class="badge"><b>김해바른 · 金해바른</b>국민의힘 · 서초구의회 1선</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head"><span class="num">01</span><h2>소개</h2></div>
+
+      <div class="stats">
+        <div class="stat"><div class="k">의회</div><div class="v">서초구의회</div></div>
+        <div class="stat"><div class="k">대수 · 선수</div><div class="v">제10대 · 1선</div></div>
+        <div class="stat"><div class="k">선거구</div><div class="v">마선거구</div></div>
+        <div class="stat"><div class="k">소속</div><div class="v">국민의힘</div></div>
+      </div>
+
+      <div class="profile">
+        <div class="card">
+          <h3>프로필</h3>
+          <dl class="info">
+            <dt>이름</dt><dd>김해바른 (金해바른)</dd>
+            <dt>출생</dt><dd>1985년 1월 11일</dd>
+            <dt>거주지</dt><dd>서울특별시 서초구</dd>
+            <dt>학력</dt><dd>중앙대학교 경영학 학사</dd>
+            <dt>소속</dt><dd>국민의힘</dd>
+            <dt>현직</dt><dd>제10대 서울특별시 서초구의회의원</dd>
+          </dl>
+        </div>
+        <div class="card">
+          <h3>인사말</h3>
+          <p style="color:var(--ink-2); font-size:15.5px;">
+            안녕하십니까, 서초구의회의원 김해바른입니다.<br /><br />
+            교통·국토 정책 현장에서 정책자문과 공공기관 이사로 일하며,
+            좋은 정책은 결국 주민의 일상에서 완성된다는 것을 배웠습니다.
+            서초에 살고, 서초에서 일하는 구의원으로서
+            구민 여러분의 작은 불편 하나도 놓치지 않겠습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER -->
+  <section id="career">
+    <div class="wrap">
+      <div class="sec-head"><span class="num">02</span><h2>주요 경력</h2></div>
+      <ul class="timeline">
+        <li class="now">
+          <div class="when">2026 — 현재</div>
+          <div class="what">제10대 서울특별시 서초구의회의원</div>
+          <div class="desc">제9회 전국동시지방선거 서초구의회 마선거구 당선 (국민의힘)</div>
+        </li>
+        <li>
+          <div class="when">전</div>
+          <div class="what">한국교통안전공단 비상임이사</div>
+        </li>
+        <li>
+          <div class="when">전</div>
+          <div class="what">국토교통부 장관 정책자문위원</div>
+        </li>
+        <li>
+          <div class="when">학력</div>
+          <div class="what">중앙대학교 경영학 학사</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COUNCIL -->
+  <section id="council">
+    <div class="wrap">
+      <div class="sec-head"><span class="num">03</span><h2>의정활동</h2></div>
+      <div class="council">
+        <div class="card">
+          <span class="tag">제10대 서초구의회</span>
+          <h3>서초구의회 마선거구</h3>
+          <p>2026년 7월부터 제10대 서초구의회에서 의정활동을 하고 있습니다.</p>
+        </div>
+        <!-- 아래 두 카드는 실제 내용으로 교체하세요 (소속 위원회, 대표 발의 조례, 5분 자유발언 등) -->
+        <div class="card todo">
+          <span class="tag">소속 위원회</span>
+          <h3>위원회 활동</h3>
+          <p>소속 상임위원회와 주요 활동 내용을 입력해 주세요.</p>
+        </div>
+        <div class="card todo">
+          <span class="tag">대표 발의</span>
+          <h3>조례 · 발언</h3>
+          <p>대표 발의 조례안, 구정질문, 5분 자유발언 등을 입력해 주세요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <div class="sec-head"><span class="num">04</span><h2>연락처</h2></div>
+        <p class="big">서초구민 여러분의<br />제안과 민원을 기다립니다.</p>
+      </div>
+      <!-- 실제 연락처로 교체하세요 -->
+      <ul>
+        <li><span>의원실</span><span>서초구의회 (서울특별시 서초구)</span></li>
+        <li><span>전화</span><span>02-000-0000</span></li>
+        <li><span>이메일</span><span>example@seocho.go.kr</span></li>
+        <li><span>SNS</span><span>@instagram</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 김해바른. All rights reserved.</span>
+      <span>서울특별시 서초구의회의원 김해바른</span>
+    </div>
+  </footer>
+
+</body>
+</html>
